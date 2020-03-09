@@ -1,0 +1,144 @@
+focus_tree = {
+	id = Bulgaria
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BUL
+		}
+	}
+	#Focus for Rally The Balkan League
+	focus = {
+		id = BUL_rallythebalkanleague
+		icon = GFX_goal_generic_national_unity
+		x = 5
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05
+		}
+	}
+
+	#Focus for Fortify Ottoman Border
+	focus = {
+		id = BUL_fortifyottomanborder
+		icon = GFX_goal_generic_construct_military
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_rallythebalkanleague }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Expansion Of The Balkan League
+	focus = {
+		id = BUL_expansionofthebalkanleague
+		icon = GFX_goal_generic_forceful_treaty
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_rallythebalkanleague }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support= 0.05
+		}
+	}
+
+	#Focus for Serbian League Links
+	focus = {
+		id = BUL_serbianleaguelinks
+		icon = GFX_goal_generic_demand_territory
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_expansionofthebalkanleague }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Invite Yugoslavia
+	focus = {
+		id = BUL_inviteyugoslavia
+		icon = GFX_goal_tripartite_pact
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_serbianleaguelinks }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_to_faction= YUG
+		}
+	}
+
+	#Focus for Are Great Nation
+	focus = {
+		id = BUL_aregreatnation
+		icon = GFX_goal_generic_attack_allies
+		x = 8
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_expansionofthebalkanleague }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim= 77
+		}
+	}
+
+	#Focus for Ask Tsar For Supplies
+	focus = {
+		id = BUL_asktsarforsupplies
+		icon = GFX_goal_generic_scientific_exchange
+		x = 3
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_fortifyottomanborder }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = infantry_weapons
+}
+		}
+	}
+
+	#Focus for Prepare For War
+	focus = {
+		id = BUL_prepareforwar
+		icon = GFX_goal_generic_military_sphere
+		x = 3
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_asktsarforsupplies }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support= 0.05
+		}
+	}
+
+#End of focuses 
+ }

@@ -1,0 +1,13 @@
+spriteTypes = { 
+ SpriteType = { 
+ name = "TW1" 
+ texturefile = "gfx/interface/goals/TakeWhats.dds" 
+ }
+SpriteType = { 
+ name = "BR1" 
+ texturefile = "gfx/interface/goals/RevengeB.dds" 
+}
+SpriteType = { 
+ name = "OD" 
+ texturefile = "gfx/interface/goals/OttomanDefence.dds" 
+ }
